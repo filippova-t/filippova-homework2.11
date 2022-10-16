@@ -15,9 +15,11 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public void add(Integer ID) {
-    basket.add (ID);
+   public void add(List<Integer> IDs) {
+   basket.addAll (IDs);
     };
+
+
 
     @Override
     public List<Integer> get() {

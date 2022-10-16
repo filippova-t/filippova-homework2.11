@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/store/order")
+@RequestMapping("/order")
 
 public class Controller {
     private final Service service;
@@ -17,8 +17,8 @@ public class Controller {
     }
 
     @GetMapping ("/add")
-    public void add (@RequestParam ("ID") Integer ID) {
-        service.add(ID);
+    public void add (@RequestParam ("ID") List<Integer> IDs) {
+        service.add(IDs);
     }
 
 
